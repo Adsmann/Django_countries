@@ -1,0 +1,18 @@
+{% extends 'testapp/Base.html' %}
+
+{% block title %}
+{{lang_main}}
+{% endblock %}
+
+{% block cont %}
+<h5>{{lang_main}}</h5>
+<ol>
+{% for el in countrys %}
+    <li style="margin-left: 10px;">
+        <a href="/country/{{el}}">{{ el }}</a>
+    </li>
+
+{% endfor %}
+</ol>
+<h6><a href="/list-language">К списку языков</a></h6>
+{% endblock %}
